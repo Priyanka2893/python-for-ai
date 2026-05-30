@@ -4,7 +4,7 @@
 # age = 32
 # age
 
-power = 20 ** 2
+power = 20**2
 power
 
 first_name = "Priyanka"
@@ -54,7 +54,7 @@ if temperature > 30:
 elif temperature > 20:
     print("It's a nice day.")
 else:
-    print("It's a cold day.")   
+    print("It's a cold day.")
 
 
 for i in range(5):
@@ -122,40 +122,47 @@ print(my_set)
 my_set.remove(3)  # Remove an element from the set
 print(my_set)
 my_set.add(2)  # Adding a duplicate element does nothing
-print(my_set)       
+print(my_set)
 
-fruits = set(["apple", "banana", "orange","apple"])
+fruits = set(["apple", "banana", "orange", "apple"])
 fruits
+
 
 # functions
 def greet(name):
     return f"Hello, {name}"
 
+
 greet("Priyanka")
+
 
 def person_info(name="Guddu", age=30):
     return f"{name} is {age} years old."
 
+
 person_info("Priyanka", 32)
 
-# always use keyword arguments when calling a function with default values 
-# to avoid confusion and ensure that the correct values are assigned 
+# always use keyword arguments when calling a function with default values
+# to avoid confusion and ensure that the correct values are assigned
 # to the correct parameters.
 
 person_info(name="Priyanka", age=32)  # Using keyword arguments
 person_info(age=32, name="Priyanka")  # Order does not matter with keyword arguments
 person_info()  # Using default values
 
-discount = 20 # Global variable
+discount = 20  # Global variable
+
 
 def calculate_price(price, discount=0):
     discount = 10  # Local variable that shadows the global variable 'discount'
     final_price = price - (price * discount / 100)
     print(discount)
-    return final_price  
+    return final_price
+
 
 result = calculate_price(100, discount)  # Using the global variable 'discount'
-discount # points to the global variable, not the local variable inside the function
+discount  # points to the global variable, not the local variable inside the function
+
 
 def simple_function():
     numbers = [1, 2, 3, 4, 5]  # Local variable
@@ -163,10 +170,8 @@ def simple_function():
     last_number = numbers[-1]  # Local variable
     return first_number, last_number
 
+
 first, last = simple_function()
 print(f"First number: {first}, Last number: {last}")
 
 # External Tools
-
-
-
